@@ -15,16 +15,18 @@ class HomeViewController: UIViewController {
     fileprivate let cellId = "cellId"
     
     //MARK:- Data Variables
-    var arrayInfoList = [AnyObject]()
+    var arrayInfoList:[String] = ["aa", "bb"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUIForViews()
     }
     
     //MARK:- Set UI for views
     func setUpUIForViews() -> Void {
-        let refresh = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(fetchDataFromAPI))
-        self.navigationItem.rightBarButtonItem  = refresh
+       // let refresh = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: self, action: #selector(fetchDataFromAPI))
+       // self.navigationItem.rightBarButtonItem  = refresh
+    
         view.backgroundColor = .white
         tableInfoList.delegate = self
         tableInfoList.dataSource = self
@@ -41,9 +43,10 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableInfoList.dequeueReusableCell(withIdentifier: cellId) as! InfoTableViewCell
-        let obj = arrayInfoList[indexPath.row]
-        cell.setData(data: obj)
+        let cell = tableInfoList.dequeueReusableCell(withIdentifier: cellId)!
+        //let obj = arrayInfoList[indexPath.row]
+        cell.textLabel?.text = arrayInfoList[indexPath.row]
+        //cell.setData(data: obj)
         return cell
     }
     
