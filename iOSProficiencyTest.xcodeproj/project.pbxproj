@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		EE1D874F241E2F11003B8451 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D874E241E2F11003B8451 /* AppDelegate.swift */; };
 		EE1D8751241E2F11003B8451 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D8750241E2F11003B8451 /* SceneDelegate.swift */; };
-		EE1D8753241E2F11003B8451 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D8752241E2F11003B8451 /* ViewController.swift */; };
-		EE1D8756241E2F11003B8451 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1D8754241E2F11003B8451 /* Main.storyboard */; };
+		EE1D8753241E2F11003B8451 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1D8752241E2F11003B8451 /* HomeViewController.swift */; };
 		EE1D8758241E2F11003B8451 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1D8757241E2F11003B8451 /* Assets.xcassets */; };
 		EE1D875B241E2F11003B8451 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE1D8759241E2F11003B8451 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		EE1D874B241E2F11003B8451 /* iOSProficiencyTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSProficiencyTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE1D874E241E2F11003B8451 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE1D8750241E2F11003B8451 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EE1D8752241E2F11003B8451 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EE1D8755241E2F11003B8451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE1D8752241E2F11003B8451 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EE1D8757241E2F11003B8451 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE1D875A241E2F11003B8451 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE1D875C241E2F11003B8451 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,62 @@
 		EE1D874D241E2F11003B8451 /* iOSProficiencyTest */ = {
 			isa = PBXGroup;
 			children = (
+				EE1D876B241E328D003B8451 /* CustomClasses */,
+				EE1D876A241E3264003B8451 /* TableViewCells */,
+				EE1D8769241E3233003B8451 /* UtilAndConstants */,
+				EE1D8764241E30D5003B8451 /* NetworkManager */,
+				EE1D8763241E30CB003B8451 /* DataModels */,
+				EE1D8762241E30BA003B8451 /* Controllers */,
 				EE1D874E241E2F11003B8451 /* AppDelegate.swift */,
 				EE1D8750241E2F11003B8451 /* SceneDelegate.swift */,
-				EE1D8752241E2F11003B8451 /* ViewController.swift */,
-				EE1D8754241E2F11003B8451 /* Main.storyboard */,
 				EE1D8757241E2F11003B8451 /* Assets.xcassets */,
 				EE1D8759241E2F11003B8451 /* LaunchScreen.storyboard */,
 				EE1D875C241E2F11003B8451 /* Info.plist */,
 			);
 			path = iOSProficiencyTest;
+			sourceTree = "<group>";
+		};
+		EE1D8762241E30BA003B8451 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EE1D8752241E2F11003B8451 /* HomeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EE1D8763241E30CB003B8451 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		EE1D8764241E30D5003B8451 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		EE1D8769241E3233003B8451 /* UtilAndConstants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UtilAndConstants;
+			sourceTree = "<group>";
+		};
+		EE1D876A241E3264003B8451 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EE1D876B241E328D003B8451 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +172,6 @@
 			files = (
 				EE1D875B241E2F11003B8451 /* LaunchScreen.storyboard in Resources */,
 				EE1D8758241E2F11003B8451 /* Assets.xcassets in Resources */,
-				EE1D8756241E2F11003B8451 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE1D8753241E2F11003B8451 /* ViewController.swift in Sources */,
+				EE1D8753241E2F11003B8451 /* HomeViewController.swift in Sources */,
 				EE1D874F241E2F11003B8451 /* AppDelegate.swift in Sources */,
 				EE1D8751241E2F11003B8451 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +191,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		EE1D8754241E2F11003B8451 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EE1D8755241E2F11003B8451 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EE1D8759241E2F11003B8451 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSProficiencyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = iOSProficiencyTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
