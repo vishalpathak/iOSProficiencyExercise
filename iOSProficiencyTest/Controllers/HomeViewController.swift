@@ -31,7 +31,7 @@ class HomeViewController: UIViewController {
         tableInfoList.delegate = self
         tableInfoList.dataSource = self
         tableInfoList.frame = view.frame
-        tableInfoList.register(UITableViewCell.self, forCellReuseIdentifier: cellId)
+        tableInfoList.register(HomeInfoTableViewCell.self, forCellReuseIdentifier: cellId)
         view.addSubview(tableInfoList)
     }
 }
@@ -43,7 +43,7 @@ extension HomeViewController:UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableInfoList.dequeueReusableCell(withIdentifier: cellId)!
+        let cell = tableInfoList.dequeueReusableCell(withIdentifier: cellId) as! HomeInfoTableViewCell
         //let obj = arrayInfoList[indexPath.row]
         cell.textLabel?.text = arrayInfoList[indexPath.row]
         //cell.setData(data: obj)
